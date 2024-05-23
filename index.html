@@ -106,25 +106,29 @@
             </p>
           </div>
         </div>
+
         <div class="contact-form">
           <h2 class="contact-me">Get <span>Resume</span></h2>
           <form action="#">
             <div class="input-box">
-              <input type="text" placeholder="Full Name" />
-              <input type="email" placeholder="Email" />
+              <input type="text" placeholder="Full Name" id="name" />
+              <input type="email" placeholder="Email" id="email" />
             </div>
 
             <textarea
-              name=""
-              id=""
+              id="message"
               cols="30"
               rows="10"
               placeholder="Write your message here"
             ></textarea>
-            <input type="submit" value="Get Resume" class="btn-1" />
+            <button type="submit" id="getResume" class="btn-1">
+              Get Resume
+            </button>
           </form>
         </div>
       </div>
     </section>
+
+    <script src="scripts.js/contactme.js"></script>
   </body>
 </html>
