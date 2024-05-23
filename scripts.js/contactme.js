@@ -4,10 +4,44 @@ const email = document.getElementById("email");
 const message = document.getElementById("message");
 const submit = document.getElementById("getResume");
 
+//to validate the values
+
+// validar formulario de registro cuando se haga submit
+submit.addEventListener("click", async function (e) {
+  e.preventDefault();
+
+  const errors = [];
+
+  if (name.value === "" || name.value === null) {
+    errors.push("El nombre es requerido. ");
+  }
+
+  // validar email con regex
+  if (email.value === "" || email.value === null) {
+    errors.push("El correo electrónico es requerido. ");
+  } else if (
+    email.value.trim() !== "" &&
+    !email.value.match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    )
+  ) {
+    errors.push("El correo electrónico no es válido. ");
+  }
+
+  if (errors.length > 0) {
+    console.log(errors);
+    swal("Hay errores en el formulario", errors.join(""), "error", {
+      button: "OK",
+    });
+  } else {
+    sendEmail();
+  }
+});
+
 async function sendEmail() {
   console.log("Sending email");
 
-  const subject = "Steven resume";
+  const subject = "Contacto Steven Chaves";
   //const values of the email request
   const requestBody = {
     subject: subject,
@@ -35,4 +69,8 @@ async function sendEmail() {
   }
 }
 
-submit.addEventListener("click", sendEmail);
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+}
+
+//submit.addEventListener("click", sendEmail);

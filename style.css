@@ -242,15 +242,6 @@ span {
 
 /* Skills */
 
-#skills {
-  width: 50%;
-  margin: 20px auto;
-  background-color: var(--color3);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .skills-container {
   display: flex;
   gap: 7em;

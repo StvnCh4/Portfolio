@@ -9,18 +9,19 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
     <header class="header">
       <a href="#" class="logo"><span>Steven</span> Chaves</a>
       <nav class="navbar">
         <a href="#" class="active">Portfolio</a>
-        <a href="#">Skills</a>
-        <a href="#">Location</a>
-        <a href="#">Contact Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#contactMe">Location</a>
+        <a href="#contactMe">Contact Me</a>
       </nav>
 
-      <a href="#" class="contact">Contact Me</a>
+      <a href="#contactMe" class="contact">Contact Me</a>
     </header>
 
     <section class="home">
@@ -32,14 +33,18 @@
         </h1>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, id
-          veritatis corrupti ad explicabo nulla voluptate adipisci vero
-          aspernatur ea voluptas cupiditate dolor at ratione nam qui
-          exercitationem tempora eum?
+          I am a passionate Software Engineer who enjoys the challenge of
+          transforming complex problems into elegant software solutions. I am
+          dedicated to continuous learning and staying current with industry
+          trends to ensure the solutions I develop are innovative and effective.
         </p>
         <div class="btn-box">
-          <button class="btn-1">Skills</button>
-          <button class="btn-2">Contact</button>
+          <button class="btn-1" onclick="scrollToSection('skills')">
+            Skills
+          </button>
+          <button class="btn-2" onclick="scrollToSection('contactMe')">
+            Contact
+          </button>
         </div>
       </div>
       <div class="img-box">
@@ -47,7 +52,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="skills">
       <h3>Hard <span>Skills</span></h3>
       <div class="skills-container">
         <div class="category" id="programming">
@@ -90,7 +95,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="contactMe">
       <div class="contact-container">
         <div class="location-box">
           <h2 class="contact-me">My <span>Location</span></h2>
